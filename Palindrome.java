@@ -10,15 +10,16 @@ public class Palindrome {
 		if (s.length()==0||s.length()==1){
 			return true;
 		}
-		return helper(s,0, s.length()-1);
+		return helper(s);
     }
 
-	public static boolean helper (String s, int first, int last){
+	public static boolean helper (String s){
+
 		if (s.length()==0||s.length()==1){
 			return true;
 		}
-		if (s.charAt(first) == s.charAt(last)){
-			return helper(s.substring(first+1, last-1), first, last);
+		if (s.charAt(0) == s.charAt(s.length()-1)){
+			return helper(s.substring(1, s.length()-1));
 		}
 		return false;
 	}

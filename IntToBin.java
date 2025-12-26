@@ -18,9 +18,9 @@ public class IntToBin {
             return "1";
         }
         if (x % 2 == 0) {
-            return toBinary(x / 2) + " 0 ";
+            return toBinary(x / 2) + "0";
         } else {
-            return toBinary(x / 2) + " 1 ";
+            return toBinary(x / 2) + "1";
         }
     }
 }
